@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Month Selector -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/monthYearText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="June ▼"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Calendar Grid -->
+        <GridLayout
+            android:id="@+id/calendarGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="7"
+            android:rowCount="7">
+
+            <!-- Weekday headers -->
+            <TextView
+                android:text="Mon"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:text="Tue"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <!-- Add Wed-Sun similarly -->
+
+            <!-- Calendar days will be added programmatically -->
+        </GridLayout>
+
+        <!-- No Events Message -->
+        <TextView
+            android:id="@+id/noEventsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Events Today!\n\nIt looks like a great day to rest, relax, and recharge."
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:padding="16dp"/>
+    </LinearLayout>
+</ScrollView>
